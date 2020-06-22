@@ -1,0 +1,119 @@
+{% extends 'main/headers.html' %}
+
+{% block content %}
+  <div class="row">
+  	
+  	<br>
+	<!-- <div class="container2">
+  	Welcome to Image Stop
+    </div> -->
+
+    {% if user.is_authenticated %}
+    	
+    <div class="row">
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          {% load static %}
+          <img width="400" height="200" src="{% static "main/nasik1.jpg" %}" alt="My image">
+          <span class="card-title myClassHey">Nasik</span>
+          <a href="{% static 'main/nasik1.jpg' %}" class="btn-floating halfway-fab waves-effect waves-light red" data-lightbox="mygallery"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content">
+          <p>Nasik is the center of pilgrims from all around India</p>
+        </div>
+        <!-- <div class="card-action">
+          <a href="{% static "main/nasik1.jpg" %}">Open Slide</a>
+        </div> -->
+      </div>
+    </div>
+  <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          {% load static %}
+          <img width="400" height="200" src="{% static "main/mumbai.jpg" %}" alt="My image">
+          <span class="card-title myClassHey">Mumbai</span>
+          <a href="{% static 'main/mumbai.jpg' %}" data-lightbox="mygallery" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content">
+          <p>The city that never sleeps</p>
+        </div>
+        <!-- <div class="card-action">
+          <a href="{% static "main/mumbai.jpg" %}">Open Slide</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          {% load static %}
+          <img width="400" height="200" src="{% static "main/nagpur.jpg" %}" alt="My image">
+          <span class="card-title myClassHey">Nagpur</span>
+          <a href="{% static 'main/nagpur.jpg' %}" class="btn-floating halfway-fab waves-effect waves-light red" data-lightbox="mygallery"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content">
+          <p>The second capital</p>
+        </div>
+        <!-- <div class="card-action">
+          <a href="{% static "main/nagpur.jpg" %}">Open Slide</a>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          {% load static %}
+          <img width="400" height="200" src="{% static "main/pune.jpg" %}" alt="My image">
+          <span class="card-title myClassHey">Pune</span>
+          <a href="{% static 'main/pune.jpg' %}" class="btn-floating halfway-fab waves-effect waves-light red" data-lightbox="mygallery"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content">
+          <p>The most livable city</p>
+        </div>
+        <!-- <div class="card-action">
+          <a href="{% static "main/pune.jpg" %}">Open Slide</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          {% load static %}
+          <img width="400" height="200" src="{% static "main/aurangabad.jpg" %}" alt="My image">
+          <span class="card-title myClassHey">Aurangabad</span>
+          <a href="{% static 'main/aurangabad.jpg' %}" class="btn-floating halfway-fab waves-effect waves-light red" data-lightbox="mygallery"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content">
+          <p>Historical City</p>
+        </div>
+        <!-- <div class="card-action">
+          <a href="{% static "main/aurangabad.jpg" %}">Open Slide</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          {% load static %}
+          <img width="400" height="200" src="{% static "main/kolhapur.jpg" %}" alt="My image">
+          <span class="card-title myClassHey">Kolhapur</span>
+          <a href="{% static 'main/kolhapur.jpg' %}" class="btn-floating halfway-fab waves-effect waves-light red" data-lightbox="mygallery"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content">
+          <p>New palace</p>
+        </div>
+        <!-- <div class="card-action">
+          <a href="{% static "main/kolhapur.jpg" %}">Open Slide</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+	{% else %}
+	<div class="container1"><a href="/register" class="waves-effect waves-light btn red darken-4">Get Started >></a></div>
+	   	
+    {% endif %}
+
+  </div>
+    
+{% endblock %}
